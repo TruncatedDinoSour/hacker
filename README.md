@@ -22,7 +22,7 @@ run `./scripts/build.sh` or :
 
 ```sh
 cc -o arr src/arr.c -Ofast -s  -std=c89
-cc -o hacker -DCODE="$(./arr $(find /usr/include/ -name '*.c*' -or -name '*.h*' | head -n 500))" src/main.c -Ofast -s -std=c89
+cc -o hacker -DCODE="$(./arr $(find /usr/include/ -type f -name '*.c*' -or -name '*.h*' | head -n 500))" src/main.c -Ofast -s -std=c89
 #                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ u can play around with this
 ```
 
