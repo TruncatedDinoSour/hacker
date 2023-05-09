@@ -32,6 +32,7 @@ static void restore(void) {
 }
 
 static void restore_s(const int sig) {
+    (void)sig;
     restore();
     _exit(0);
 }
