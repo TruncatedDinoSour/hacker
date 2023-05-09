@@ -16,6 +16,10 @@ useless for this besides build time, it takes files as input, for the build scri
 `code.txt`, although ur free to just use it inline lol, i include the `code.txt` cache from my system if u want it to
 just work, but for uniqueness and more diverse output id suggest to just use ur own
 
+keep in mind, the `arr` utility ignores null bytes no matter what, this is intentional, null byte would indicate that
+its binary data or smt and i dont want that, so its stopping before it reads all of it, if u want to use `arr.c`
+modify it to use the `sz` instead of a while value is truthy
+
 # compilation
 
 run `./scripts/build.sh` or :
